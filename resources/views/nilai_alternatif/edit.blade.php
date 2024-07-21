@@ -32,13 +32,9 @@
                             class="custom-select" required="required">
                             <option value="" selected disabled hidden></option>
                             @foreach ($krit->subkriteria as $subkrit)
-                            <option value="{{ $subkrit->id }}" @if ($item->
-                                nilai_alt->where('kriteria_id',
-                                $krit->kode_kriteria)->first()->subkriteria->bobot_subkriteria ==
-                                $subkrit->bobot_subkriteria)
-                                selected
-                                @endif>
-                                {{ $subkrit->nama_subkriteria }}</option>
+                            <option value="{{ $subkrit->id }}" @if ($item->nilai_alt->where('kriteria_id', $krit->kode_kriteria)->first() && $item->nilai_alt->where('kriteria_id', $krit->kode_kriteria)->first()->subkriteria && $item->nilai_alt->where('kriteria_id', $krit->kode_kriteria)->first()->subkriteria->bobot_subkriteria == $subkrit->bobot_subkriteria) selected @endif>
+                                {{ $subkrit->nama_subkriteria }}
+                            </option>
                             @endforeach
                         </select>
                     </div>

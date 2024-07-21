@@ -16,6 +16,11 @@
                     3. Cukup = 3<br>
                     4. Kurang = 2<br>
                     5. Sangat Kurang = 1
+                    {{-- <div class="form-group py-3">
+                        <label for="id">Kode Keterangan Kriteria</label>
+                        <input type="number" required="required" class="form-control" id="id"
+                            name="id" value="">
+                    </div> --}}
                     <div class="d-flex py-3 gap-9">
                         <div class="form-group">
                             <label for="nama_subkriteria" style="font-weight: 700">Nama Subkriteria</label>

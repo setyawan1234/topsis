@@ -11,6 +11,7 @@ class subkriteria extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
+        // 'id',
         'nama_subkriteria',
         'bobot_subkriteria',
         'kode_kriteria'

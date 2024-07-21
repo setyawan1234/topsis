@@ -47,6 +47,7 @@ class SubkriteriaController extends Controller
     public function store(Request $request)
     {
         $data = [
+            // 'id' => $request->id,
             'nama_subkriteria' => $request->nama_subkriteria,
             'bobot_subkriteria' => $request->bobot_subkriteria,
             'kode_kriteria' => $request->kode_kriteria,

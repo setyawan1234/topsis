@@ -31,13 +31,16 @@ class NormalisasiController extends Controller
         // Array untuk menyimpan hasil normalisasi
         $hasil = [];
 
-        // Menghitung nilai kuadrat untuk setiap alternatif pada setiap kriteria
+        // mengiterasi setiap elemen dalam array kriteria
         foreach ($kriterias as $kriteria) {
+            // mengambil data model nilaiAlt berdasarkan kriteria_id yang sama dengan kode kriteria
             $nilaiAltsKriteria = NilaiAlt::where('kriteria_id', $kriteria->kode_kriteria)->get();
 
+            // mengiterasi setiap elemen dalam array nilaiAlt 
             foreach ($nilaiAltsKriteria as $nilaiAlt) {
+                // menghitung nilaiAlt value pangkat 2
                 $rumus = pow($nilaiAlt->value, 2);
-                // Menyimpan nilai kuadrat dalam array normalisasi
+                // menyimpan hasil perhitungan ke dalam array normalisasi
                 $normalisasi[$nilaiAlt->kriteria_id][$nilaiAlt->alternatif_id] = $rumus;
             }
 

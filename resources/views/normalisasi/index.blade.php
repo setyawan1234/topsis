@@ -3,7 +3,7 @@
 @section('title', 'Normalisasi')
 @section('contents')
 <div class="container">
-    <h2>Mengkonversikan data analisa kredit diatas kedalam bentuk fuzzy</h2>
+    <h2>Hasil akar X dari setiap kolom kriteria</h2>
 
     {{-- Add this section to inspect variables --}}
     {{-- {{ dd($normalisasi, $kriterias, $alternatifs, $pembagi) }} --}}
@@ -165,7 +165,7 @@
         <tbody>
             @foreach ($rank as $alternatif => $jarak)
                 <tr>
-                    <td style="text-align: center;">Alternatif {{ $alternatif }}</td>
+                    <td style="text-align: center;">Alternatif {{$alternatif}}</td>
                     <td style="text-align: center;">{{ $preferensi[$alternatif] }}</td>
                         {{-- Check if the key exists in the $normalisasi array --}}
                     <td style="text-align: center;"> {{ $jarak }}</td> 
